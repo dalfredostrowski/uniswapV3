@@ -22,7 +22,10 @@ async function getPrice(addressFrom, addressTo, amountInHuman) {
   );
 
   const amountIn = ethers.utils.parseUnits(amountInHuman, 6);
-
+  
+  
+  
+  # the 3000 is the immutables.fee
   const quoteAmountOut = await quoterContract.callStatic.quoteExactInputSingle(
     addressFrom,
     addressTo,
